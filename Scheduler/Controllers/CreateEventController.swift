@@ -22,7 +22,7 @@ class CreateEventController: UIViewController {
   
   public var event: Event? 
   
-  // private for setting: private for changing "setting"
+  // private for setting: private for changing aka "setting"
   // public for getting: public for reading
   public private(set) var eventState = EventState.newEvent // this VC is in newEvent state by default
   
@@ -44,7 +44,7 @@ class CreateEventController: UIViewController {
     }
   private func updateUI() {
     if let event = event { // coming from didSelectRowAt (an exisiting event) - if it exists we have the values to pass to the VC 
-      self.event = event
+      self.event = event // ??
       datePicker.date = event.date
       eventNameTextField.text = event.name
       eventButton.setTitle("Update Event", for: .normal)
